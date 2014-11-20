@@ -1,0 +1,33 @@
+dashboard:
+  - Patients
+    - Personal details - history
+    - General Examination - images
+    - Systemic Examination - images
+    - Investigations to patient
+    - Diagnosis + Audit trail
+  - Diseases
+
+
+rails g model RespiratorySystem  breathing_vesicular:boolean breathing_brinchial:boolean coarse_crepts:boolean fine_crepts:boolean rhoncii:string pleural_rub:string percussion:integer vocal_resonance_altered:boolean 
+
+rails g model GastroIntestinalSystem ascites:boolean abd_movement_absent:boolean visible_peristalsis:boolean tenderness:string rebound_tenderness:boolean abd_rigidity:boolean mass_abdomen:string hepatomegaly:string gall_bladder:string murphy_sign:boolean splenomegaly:string renal_enlargement:boolean urinary_bladder_extended:boolean shifting_dullness:boolean bowel_sound_exaggereted:boolean silent_abdomed:boolean 
+
+rails g model CardioVascularSystem apex_beat_outward:boolean thrills:boolean heart_sounds:integer systolic_murmer:string diastolic_murmer:string 
+rails g model NervousSystem level_of_consciousness:string glasgow_score:string higher_functions:string neck:boolean cranial_nerves:string sensory_functions:string motor_functions:string abdominal_reflexes:boolean joint_reflexes:boolean planter_reflex:boolean
+
+rails g model Eye lids:string conjunctiva:string cornea:string distant_vision:string near_vision:string cover_test:string
+
+rails g model ENT external_ear:string tympanic_membrane:string mastroid:string hearing:string frontal_cynus:string maxil_cynus:string nose:string throat:string
+
+rails g model Skin pigmentation_rash:string erruptions:string other_lesions:string
+
+rails g model GenitoUrinarySystem genitals:string
+
+rails g model MusculoSkeletalSystem upper_extremity:string lower_extremity:string others:string
+
+> rails g scaffold patient name:string sex:integer age:integer complaints:string center:string history:string
+> rails g model GeneralExam Icterus:boolean Pallor:boolean Clubbing:boolean cynosis:boolean oedema:string Lymphadenitis:string higher_functions:string dehydration:boolean bp:string pulse:string image_path:string
+rails g model SystemicExam 
+
+
+ 

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apex_beat_outward: false
+  thrills: false
+  heart_sounds: 1
+  systolic_murmer: MyString
+  diastolic_murmer: MyString
+
+two:
+  apex_beat_outward: false
+  thrills: false
+  heart_sounds: 1
+  systolic_murmer: MyString
+  diastolic_murmer: MyString

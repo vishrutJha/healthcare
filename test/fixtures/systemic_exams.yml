@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  RespiratorySystem_id: 
+  GastroIntestinalSystem_id: 
+  CardioVascularSystem_id: 
+  NervousSystem_id: 
+  Eye_id: 
+  ENT_id: 
+  Skin_id: 
+  GenitoUrinalSystem_id: 
+  MusculoSkeletalSystem_id: 
+
+two:
+  RespiratorySystem_id: 
+  GastroIntestinalSystem_id: 
+  CardioVascularSystem_id: 
+  NervousSystem_id: 
+  Eye_id: 
+  ENT_id: 
+  Skin_id: 
+  GenitoUrinalSystem_id: 
+  MusculoSkeletalSystem_id: 

@@ -1,0 +1,53 @@
+<%= form_for(@systemic_exam) do |f| %>
+  <% if @systemic_exam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@systemic_exam.errors.count, "error") %> prohibited this systemic_exam from being saved:</h2>
+
+      <ul>
+      <% @systemic_exam.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :RespiratorySystem_id %><br>
+    <%= f.text_field :RespiratorySystem_id %>
+  </div>
+  <div class="field">
+    <%= f.label :GastroIntestinalSystem_id %><br>
+    <%= f.text_field :GastroIntestinalSystem_id %>
+  </div>
+  <div class="field">
+    <%= f.label :CardioVascularSystem_id %><br>
+    <%= f.text_field :CardioVascularSystem_id %>
+  </div>
+  <div class="field">
+    <%= f.label :NervousSystem_id %><br>
+    <%= f.text_field :NervousSystem_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Eye_id %><br>
+    <%= f.text_field :Eye_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ENT_id %><br>
+    <%= f.text_field :ENT_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Skin_id %><br>
+    <%= f.text_field :Skin_id %>
+  </div>
+  <div class="field">
+    <%= f.label :GenitoUrinalSystem_id %><br>
+    <%= f.text_field :GenitoUrinalSystem_id %>
+  </div>
+  <div class="field">
+    <%= f.label :MusculoSkeletalSystem_id %><br>
+    <%= f.text_field :MusculoSkeletalSystem_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

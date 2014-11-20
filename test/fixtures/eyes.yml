@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lids: MyString
+  conjunctiva: MyString
+  cornea: MyString
+  distant_vision: MyString
+  near_vision: MyString
+  cover_test: MyString
+
+two:
+  lids: MyString
+  conjunctiva: MyString
+  cornea: MyString
+  distant_vision: MyString
+  near_vision: MyString
+  cover_test: MyString

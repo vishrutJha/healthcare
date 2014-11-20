@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level_of_consciousness: MyString
+  glasgow_score: MyString
+  higher_functions: MyString
+  neck: false
+  cranial_nerves: MyString
+  sensory_functions: MyString
+  motor_functions: MyString
+  abdominal_reflexes: false
+  joint_reflexes: false
+  planter_reflex: false
+
+two:
+  level_of_consciousness: MyString
+  glasgow_score: MyString
+  higher_functions: MyString
+  neck: false
+  cranial_nerves: MyString
+  sensory_functions: MyString
+  motor_functions: MyString
+  abdominal_reflexes: false
+  joint_reflexes: false
+  planter_reflex: false

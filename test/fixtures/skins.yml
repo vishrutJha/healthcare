@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pigmentation/rash: MyString
+  erruptions: MyString
+  other_lesions: MyString
+
+two:
+  pigmentation/rash: MyString
+  erruptions: MyString
+  other_lesions: MyString

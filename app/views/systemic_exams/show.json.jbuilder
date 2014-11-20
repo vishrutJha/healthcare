@@ -1,0 +1,1 @@
+json.extract! @systemic_exam, :id, :RespiratorySystem_id, :GastroIntestinalSystem_id, :CardioVascularSystem_id, :NervousSystem_id, :Eye_id, :ENT_id, :Skin_id, :GenitoUrinalSystem_id, :MusculoSkeletalSystem_id, :created_at, :updated_at

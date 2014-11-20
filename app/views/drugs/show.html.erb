@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @drug.name %>
+</p>
+
+<p>
+  <strong>Trade name:</strong>
+  <%= @drug.trade_name %>
+</p>
+
+<p>
+  <strong>Indication:</strong>
+  <%= @drug.indication %>
+</p>
+
+<p>
+  <strong>Contra indication:</strong>
+  <%= @drug.contra_indication %>
+</p>
+
+<p>
+  <strong>Dosage:</strong>
+  <%= @drug.dosage %>
+</p>
+
+<p>
+  <strong>Side effect:</strong>
+  <%= @drug.side_effect %>
+</p>
+
+<p>
+  <strong>Diagnoses:</strong>
+  <%= @drug.diagnoses.collect(&:name).join(", ") %>
+</p>
+
+<%= link_to 'Edit', edit_drug_path(@drug) %> |
+<%= link_to 'Back', drugs_path %>

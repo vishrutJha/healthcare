@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  external_ear: MyString
+  tympanic_membrane: MyString
+  mastroid: MyString
+  hearing: MyString
+  frontal_cynus: MyString
+  maxil_cynus: MyString
+  nose: MyString
+  throat: MyString
+
+two:
+  external_ear: MyString
+  tympanic_membrane: MyString
+  mastroid: MyString
+  hearing: MyString
+  frontal_cynus: MyString
+  maxil_cynus: MyString
+  nose: MyString
+  throat: MyString

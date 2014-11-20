@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  upper_extremity: MyString
+  lower_extremity: MyString
+  others: MyString
+
+two:
+  upper_extremity: MyString
+  lower_extremity: MyString
+  others: MyString

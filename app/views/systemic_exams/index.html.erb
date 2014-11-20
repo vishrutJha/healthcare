@@ -1,0 +1,41 @@
+<h1>Listing systemic_exams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Respiratorysystem</th>
+      <th>Gastrointestinalsystem</th>
+      <th>Cardiovascularsystem</th>
+      <th>Nervoussystem</th>
+      <th>Eye</th>
+      <th>Ent</th>
+      <th>Skin</th>
+      <th>Genitourinalsystem</th>
+      <th>Musculoskeletalsystem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @systemic_exams.each do |systemic_exam| %>
+      <tr>
+        <td><%= systemic_exam.RespiratorySystem %></td>
+        <td><%= systemic_exam.GastroIntestinalSystem %></td>
+        <td><%= systemic_exam.CardioVascularSystem %></td>
+        <td><%= systemic_exam.NervousSystem %></td>
+        <td><%= systemic_exam.Eye %></td>
+        <td><%= systemic_exam.ENT %></td>
+        <td><%= systemic_exam.Skin %></td>
+        <td><%= systemic_exam.GenitoUrinalSystem %></td>
+        <td><%= systemic_exam.MusculoSkeletalSystem %></td>
+        <td><%= link_to 'Show', systemic_exam %></td>
+        <td><%= link_to 'Edit', edit_systemic_exam_path(systemic_exam) %></td>
+        <td><%= link_to 'Destroy', systemic_exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Systemic exam', new_systemic_exam_path %>

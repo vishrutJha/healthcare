@@ -1,0 +1,27 @@
+<h1>Listing diagnoses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Drugs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @diagnoses.each do |diagnosis| %>
+      <tr>
+        <td><%= diagnosis.name %></td>
+        <td><%= diagnosis.drugs.collect(&:name).join("<br/>").html_safe %></td>
+        <td><%= link_to 'Show', diagnosis %></td>
+        <td><%= link_to 'Edit', edit_diagnosis_path(diagnosis) %></td>
+        <td><%= link_to 'Destroy', diagnosis, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Diagnosis', new_diagnosis_path %>

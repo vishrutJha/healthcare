@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tname: MyString
+  indications: MyString
+  contra_indication: MyString
+  dosage: MyString
+  sideffect: MyString
+
+two:
+  name: MyString
+  tname: MyString
+  indications: MyString
+  contra_indication: MyString
+  dosage: MyString
+  sideffect: MyString

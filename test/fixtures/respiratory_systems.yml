@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  breathing_vesicular: false
+  breathing_brinchial: false
+  coarse_crepts: false
+  fine_crepts: false
+  rhoncii: MyString
+  pleural_rub: MyString
+  percussion: 1
+  vocal_resonance_altered: false
+
+two:
+  breathing_vesicular: false
+  breathing_brinchial: false
+  coarse_crepts: false
+  fine_crepts: false
+  rhoncii: MyString
+  pleural_rub: MyString
+  percussion: 1
+  vocal_resonance_altered: false

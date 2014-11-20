@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Healthcare</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="animated fadeInDown">
+  <%= stylesheet_link_tag "main", media: "screen" %>
+  <%= stylesheet_link_tag "slidebars", media: "screen" %>
+  <%= stylesheet_link_tag "footer", media: "all" %>
+
+  <div class="dashboard-wrapper" style="min-height: inherit;">
+    <div class="container">
+      <% if notice %>
+      <div id="notice" class="alert alert-info alert-white rounded">
+        <center><%= notice %></center>
+      </div>
+      <% end -%>
+
+      <%= yield %>
+    </div>
+  </div>
+
+</body>
+</html>
