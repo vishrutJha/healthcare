@@ -1,0 +1,10 @@
+.panel-heading{style: "height: 54px;"}
+  .row{style: "padding: 0 10px 0 10px;"}
+    %font{size: "5"}
+      = link_to "Healthcare", root_path
+
+    .btn-group
+      = link_to "Patients", patients_path, class: "btn"
+      = link_to "Drugs", drugs_path, class: "btn"
+      = link_to "Diagnoses", diagnoses_path, class: "btn"
+      = link_to "Prescription", prescriptions_path, class: "btn"

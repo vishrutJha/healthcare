@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'will_paginate-bootstrap'
 gem 'rails', '4.1.2'
 gem 'mysql2'
-gem 'bootstrap-sass', '~> 3.2.0'
 
 group :assets do
   gem 'sass-rails',   '4.0.3'
@@ -12,8 +11,9 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
 end
 
-gem 'therubyracer',  platforms: :ruby
-
+gem "therubyracer"
+gem 'less-rails', git: 'git://github.com/metaskills/less-rails.git'
+gem "twitter-bootstrap-rails"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -33,6 +33,7 @@ gem 'pdfkit'
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'haml-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
