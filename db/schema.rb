@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114102600) do
+ActiveRecord::Schema.define(version: 20141203035148) do
 
   create_table "cardio_vascular_systems", force: true do |t|
     t.boolean  "apex_beat_outward"
@@ -145,6 +145,18 @@ ActiveRecord::Schema.define(version: 20141114102600) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "patient_prescriptions", force: true do |t|
+    t.integer  "patient_id"
+    t.integer  "prescription_id"
+    t.integer  "diagnosis_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "patient_prescriptions", ["diagnosis_id"], name: "index_patient_prescriptions_on_diagnosis_id", using: :btree
+  add_index "patient_prescriptions", ["patient_id"], name: "index_patient_prescriptions_on_patient_id", using: :btree
+  add_index "patient_prescriptions", ["prescription_id"], name: "index_patient_prescriptions_on_prescription_id", using: :btree
 
   create_table "patients", force: true do |t|
     t.string   "name"

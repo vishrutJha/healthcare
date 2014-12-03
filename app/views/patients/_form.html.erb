@@ -35,7 +35,82 @@
     <%= f.label :history %><br>
     <%= f.text_field :history %>
   </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"> Select Prescriptions </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="search_table" placeholder="Type here to search" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2"></div>
+      <div class="col-md-10" style="margin-top:10px;max-height:500px;overflow-y:auto;">
+        <table id="patient_prescriptions_list" class="table table-responsive table-bordered table-hover">
+          <thead>
+            <th>Sl. NO.</th>
+            <th>Prescription</th>
+          </thead>
+          <tbody id="prescription_list">
+          <% Prescription.all.each_with_index do |prescription, index| %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td class="check-select">
+                <%= check_box_tag "patient[prescription_ids][]", prescription.id, @patient.prescriptions.include?(prescription) %>
+                <%= prescription.date %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"> Select Diagnoses </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="search_table" placeholder="Type here to search" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2"></div>
+      <div class="col-md-10" style="margin-top:10px;max-height:500px;overflow-y:auto;">
+        <table id="patient_diagnoses_list" class="table table-responsive table-bordered table-hover">
+          <thead>
+            <th>Sl. NO.</th>
+            <th>Diagnosis</th>
+          </thead>
+          <tbody id="diagnosis_list">
+          <% Diagnosis.all.each_with_index do |diagnosis, index| %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td class="check-select">
+                <%= check_box_tag "patient[diagnosis_ids][]", diagnosis.id, @patient.diagnoses.include?(diagnosis) %>
+                <%= diagnosis.name %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  oTable = $('#patient_prescriptions_list').dataTable({
+       aLengthMenu: [
+        [25, 50, 100, 200, -1],
+        [25, 50, 100, 200, "All"]
+    ],
+    iDisplayLength: -1
+  });
+
+  $('#search_table').keyup(function(){
+    oTable.fnFilter( $(this).val() );
+  });
+
+  $('#patient_prescriptions_list_filter').hide();
+</script>

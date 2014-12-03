@@ -30,5 +30,15 @@
   <%= @patient.history %>
 </p>
 
+<p>
+  <strong>Prescriptions:</strong>
+  <%= @patient.prescriptions.collect(&:date).join(", ") %>
+</p>
+
+<p>
+  <strong>Diagnoses:</strong>
+  <%= @patient.diagnoses.collect(&:name).join(", ") %>
+</p>
+
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>

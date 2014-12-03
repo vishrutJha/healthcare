@@ -69,6 +69,6 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:name, :sex, :age, :complaints, :center, :history)
+      params.require(:patient).permit(:name, :sex, :age, :complaints, :center, :history, { prescription_ids: [] }, { diagnosis_ids: [] } )
     end
 end
