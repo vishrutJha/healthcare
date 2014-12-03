@@ -5,5 +5,10 @@
   <%= @prescription.date %>
 </p>
 
+<p>
+  <strong>Drugs:</strong>
+  <%= @prescription.drugs.collect(&:name).join(", ") %>
+</p>
+
 <%= link_to 'Edit', edit_prescription_path(@prescription) %> |
 <%= link_to 'Back', prescriptions_path %>

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :drugs
-
   resources :diagnoses
 
   resources :prescriptions
+
+  resources :drugs
 
   resources :systemic_exams
 

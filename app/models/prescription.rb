@@ -1,3 +1,3 @@
 class Prescription < ActiveRecord::Base
-  has_many :drugs
+  has_and_belongs_to_many :drugs
 end

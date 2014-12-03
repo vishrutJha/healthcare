@@ -53,6 +53,9 @@ ActiveRecord::Schema.define(version: 20141114102600) do
     t.integer "prescription_id", null: false
   end
 
+  add_index "drugs_prescriptions", ["drug_id", "prescription_id"], name: "index_drugs_prescriptions_on_drug_id_and_prescription_id", using: :btree
+  add_index "drugs_prescriptions", ["prescription_id", "drug_id"], name: "index_drugs_prescriptions_on_prescription_id_and_drug_id", using: :btree
+
   create_table "ents", force: true do |t|
     t.string   "external_ear"
     t.string   "tympanic_membrane"
