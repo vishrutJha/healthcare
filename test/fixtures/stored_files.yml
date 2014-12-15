@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  name: MyString
+  storage_type: MyString
+  storage_id: 1
+
+two:
+  path: MyString
+  name: MyString
+  storage_type: MyString
+  storage_id: 1

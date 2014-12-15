@@ -1,5 +1,6 @@
 class DiagnosesController < ApplicationController
   before_action :set_diagnosis, only: [:show, :edit, :update, :destroy]
+  before_action :set_file_types
 
   # GET /diagnoses
   # GET /diagnoses.json
@@ -25,6 +26,7 @@ class DiagnosesController < ApplicationController
   # POST /diagnoses.json
   def create
     @diagnosis = Diagnosis.new(diagnosis_params)
+    @diagnosis.stored_file_ids = params[:stored_file_ids] || []
 
     respond_to do |format|
       if @diagnosis.save
@@ -40,6 +42,8 @@ class DiagnosesController < ApplicationController
   # PATCH/PUT /diagnoses/1
   # PATCH/PUT /diagnoses/1.json
   def update
+    @diagnosis.stored_file_ids = params[:stored_file_ids] || []
+
     respond_to do |format|
       if @diagnosis.update(diagnosis_params)
         format.html { redirect_to @diagnosis, notice: 'Diagnosis was successfully updated.' }
@@ -65,6 +69,10 @@ class DiagnosesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_diagnosis
       @diagnosis = Diagnosis.find(params[:id])
+    end
+
+    def set_file_types
+      @file_types = "jpg,png,gif,doc,pdf,zip"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

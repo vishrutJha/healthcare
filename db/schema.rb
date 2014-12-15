@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203035148) do
+ActiveRecord::Schema.define(version: 20141210152721) do
 
   create_table "cardio_vascular_systems", force: true do |t|
     t.boolean  "apex_beat_outward"
@@ -192,6 +192,15 @@ ActiveRecord::Schema.define(version: 20141203035148) do
     t.string   "pigmentation_rash"
     t.string   "erruptions"
     t.string   "other_lesions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stored_files", force: true do |t|
+    t.string   "path"
+    t.string   "name"
+    t.string   "storage_type"
+    t.integer  "storage_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Files:</strong>
+  <%= @diagnosis.stored_files.map(&:name).join(", ") %>
+</p>
+
+<p>
   <strong>Drugs:</strong>
   <%= @diagnosis.drugs.collect(&:name).join(", ") %>
 </p>

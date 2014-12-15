@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Files</th>
       <th>Drugs</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +14,11 @@
     <% @diagnoses.each do |diagnosis| %>
       <tr>
         <td><%= diagnosis.name %></td>
+        <td>
+          <% diagnosis.stored_files.each do |a| %>
+            <h5><span class="label label-info"><%= link_to a.name.capitalize, ftp_download_path(file_path: a.path, file_directory: "diagnoses") %></span></h5>
+          <% end %>
+        </td>
         <td><%= diagnosis.drugs.collect(&:name).join("<br/>").html_safe %></td>
         <td><%= link_to 'Show', diagnosis %></td>
         <td><%= link_to 'Edit', edit_diagnosis_path(diagnosis) %></td>

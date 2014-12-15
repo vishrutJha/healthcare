@@ -11,6 +11,7 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
 end
 
+gem 'jquery-fileupload-rails'
 gem "therubyracer"
 gem 'less-rails', git: 'git://github.com/metaskills/less-rails.git'
 gem "twitter-bootstrap-rails"

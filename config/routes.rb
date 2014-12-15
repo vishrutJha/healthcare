@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :diagnoses
+  resources :stored_files
+
+  resources :diagnoses do
+    resources :stored_files
+  end
 
   resources :prescriptions
 
